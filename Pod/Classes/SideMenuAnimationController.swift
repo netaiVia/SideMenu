@@ -123,7 +123,6 @@ private extension SideMenuAnimationController {
             else { return }
 
         originalSuperview = presentingViewController.view.superview
-        containerView?.addSubview(presentingViewController.view)
         containerView?.addSubview(presentedViewController.view)
     }
 

@@ -49,7 +49,7 @@ internal final class SideMenuPresentationController {
         guard config.statusBarEndAlpha > .leastNonzeroMagnitude else { return nil }
 
         return UIView {
-            $0.backgroundColor = config.presentationStyle.backgroundColor
+            $0.backgroundColor = .clear
             $0.autoresizingMask = [.flexibleHeight, .flexibleWidth]
             $0.isUserInteractionEnabled = false
         }
@@ -104,7 +104,6 @@ internal final class SideMenuPresentationController {
         }
 
         presentingViewController.view.isUserInteractionEnabled = config.presentingViewControllerUserInteractionEnabled
-        containerView.backgroundColor = config.presentationStyle.backgroundColor
         
         layerViews()
 
